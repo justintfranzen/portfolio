@@ -63,7 +63,7 @@
 }
 
 .hero-section {
-  position: fixed;
+  position: fixed !important;
   margin: 0 auto;
   width: 100%;
   top: 0;
@@ -234,7 +234,7 @@
     box-shadow: 0 5px 20px #808080;
     display: flex;
     justify-content: center;
-    overflow: hidden;
+    overflow: hidden !important;
     height: 13em;
 
     &:hover {
