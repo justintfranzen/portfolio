@@ -234,7 +234,7 @@
     box-shadow: 0 5px 20px #808080;
     display: flex;
     justify-content: center;
-    overflow: hidden;
+    overflow: hidden !important;
     height: 13em;
 
     &:hover {
