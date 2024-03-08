@@ -157,32 +157,47 @@
   letter-spacing: 1px;
   z-index: 2;
 
-  li {
-    font-family: $font-primary;
-    transition: 0.3s;
-    border: 1px solid #fff;
-    border-radius: 20px;
-    padding: 0.5em 1em;
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 28em;
 
     @media (max-width: 430px) {
-      font-size: 18px;
+      flex-direction: column;
+      width: auto;
     }
 
-    .fa-light {
-      opacity: 0;
+    li {
+      font-family: $font-primary;
       transition: 0.3s;
-      position: absolute;
-      right: 1em;
-    }
+      border: 1px solid #fff;
+      border-radius: 20px;
+      padding: 0.5em 1em;
 
-    &:hover {
-      cursor: pointer;
-      padding-right: 2em;
-      background: #fff;
+      @media (max-width: 430px) {
+        font-size: 18px;
+
+        &:first-child {
+          margin-bottom: 1.5em;
+        }
+      }
 
       .fa-light {
-        opacity: 1;
-        right: 0.5em;
+        opacity: 0;
+        transition: 0.3s;
+        position: absolute;
+        right: 1em;
+      }
+
+      &:hover {
+        cursor: pointer;
+        padding-right: 2em;
+        background: #fff;
+
+        .fa-light {
+          opacity: 1;
+          right: 0.5em;
+        }
       }
     }
   }
@@ -420,6 +435,90 @@
       color: #000;
       font-family: $font-primary;
       line-height: 24px;
+    }
+  }
+}
+
+.about-contact {
+  position: fixed;
+  z-index: 2;
+  height: 100vh;
+  background: #ededed;
+  top: -100%;
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+
+  @media (max-width: 980px) {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-x: scroll;
+    padding: 4em 1.5em 8em;
+  }
+
+  .about,
+  .contact {
+    width: 50%;
+    padding: 2em;
+
+    @media (max-width: 980px) {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  .about {
+    padding-bottom: 0 !important;
+  }
+
+  .contact {
+    padding-top: 0;
+    margin-top: 5em;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .close {
+    width: 3em;
+    height: 3em;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    background: #800000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+
+    .fa-light {
+      &::before {
+        font-size: 32px;
+      }
+    }
+  }
+
+  .gform-body {
+    &.gform_body {
+      input,
+      textarea {
+        border: 1.5px solid #800000;
+        background: #ededed;
+      }
+    }
+  }
+
+  .gform_footer {
+    &.before {
+      .gform_button.button {
+        background: #800000 !important;
+        cursor: pointer !important;
+        text-transform: uppercase !important;
+        font-weight: 18px !important;
+      }
     }
   }
 }
