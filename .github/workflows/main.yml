@@ -15,7 +15,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        server: <ftp_server> # Replace this with the appropriate ftp server on your SiteGround server
+        server: ftp.justinfranzen.com
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
-  server-dir: /public_html/  # Replace this with the appropriate directory on your SiteGround server
+  server-dir: justinfranzen.com/public_html/
