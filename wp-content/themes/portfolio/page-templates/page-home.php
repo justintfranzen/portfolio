@@ -14,17 +14,18 @@ get_header();
 <div class="hero-section right"></div>
 
 <div class="intro-section">
-<div class="info">
-     <h1><?= the_field('name') ?></h1>
-     <hr>
-   <h3><?= the_field('description') ?></h3>
-       <div class="nav">
-        <ul>
-            <li class="work-section">EXPLORE PROJECTS <i class="fa-light fa-arrow-right-long"></i></li>
-        </ul>
-    </div>
+    <div class="info">
+         <h1><?= the_field('name') ?></h1>
+         <hr>
+       <h3><?= the_field('description') ?></h3>
+           <div class="nav">
+            <ul>
+                <li class="about-contact-btn">ABOUT + CONTACT <i class="fa-light fa-arrow-right-long"></i></li>
+                <li class="work-section">EXPLORE PROJECTS <i class="fa-light fa-arrow-right-long"></i></li>
+            </ul>
+        </div>
 
-</div>
+    </div>
 </div>
 <div class="hero-section">
   
@@ -89,6 +90,19 @@ endif; ?>
     <?php
     endwhile; ?>
 <?php endif; ?>
+
+<div class="about-contact">
+
+<div class="about">
+<div class="close"><i class="fa-light fa-xmark"></i></div>
+<h2>MY STORY</h2>
+<?= the_field('about') ?>
+</div>
+
+<div class="contact">
+    <h2>SEND A MESSAGE</h2>
+    <?= do_shortcode(get_field('contact_form')) ?>
+</div>
 
 
 <?php get_footer(); ?>
