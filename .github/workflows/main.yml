@@ -39,7 +39,7 @@ jobs:
       run: ls -la
 
     - name: GitHub Action Deploy to SiteGround
-      uses: siteground/github-action-siteground-site-deploy@v3
+      uses: JustinFranzen/FTP-Deploy-Action@v3
       with:
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
