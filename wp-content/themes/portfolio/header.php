@@ -373,9 +373,7 @@ $show_search_icon = (false !== et_get_option('show_search_icon', true) && !$et_s
  * Fires at the end of the 'et-top-navigation' element, just before its closing tag.
  *
  * @since 1.0
- */<?php
-
-do_action('et_header_top'); ?>
+ */<?php do_action('et_header_top'); ?>
 				</div> <!-- #et-top-navigation -->
 			</div> <!-- .container -->
 			<?php if ($show_search_icon): ?>
@@ -412,6 +410,4 @@ do_action('et_header_top'); ?>
  * Fires after the header, before the main content is output.
  *
  * @since 3.10
- */<?php
-
-do_action('et_before_main_content');
+ */<?php do_action('et_before_main_content');
