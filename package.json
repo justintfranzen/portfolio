@@ -1,0 +1,28 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "portfolio Website",
+  "main": "index.php",
+  "scripts": {
+    "build": "npm run build --prefix ./wp-content/themes/portfolio",
+    "dev": "npm run dev --prefix ./wp-content/themes/portfolio",
+    "postinstall": "npm install ./wp-content/themes/portfolio",
+    "lint": "npm run lint --prefix ./wp-content/themes/portfolio",
+    "lint:fix": "npm run lint:fix --prefix ./wp-content/themes/portfolio"
+  },
+  "repository": {
+    "type": "git",
+    "url": "TODO"
+  },
+  "author": "THIEL",
+  "license": "UNLICENSED",
+  "private": true,
+  "engineStrict": true,
+  "engines": {
+    "node": ">=16",
+    "npm": ">=8"
+  },
+  "dependencies": {
+    "portfolio": "file:wp-content/themes/portfolio"
+  }
+}
