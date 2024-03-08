@@ -247,7 +247,8 @@
     @media (max-width: 430px) {
       margin: 0 auto;
       width: 90%;
-      height: 15em;
+      height: 15em !important;
+      visibility: hidden;
     }
 
     .background-container {
