@@ -7,6 +7,7 @@ export const initNextSection = () => {
   const heroSectionLeft = document.querySelector('.hero-section.left');
   const heroSectionRight = document.querySelector('.hero-section.right');
   const projects = document.querySelectorAll('.project');
+  const projectSection = document.querySelector('.projects');
 
   projectsLink.addEventListener('click', () => {
     heroSectionLeft.classList.add('open-left');
@@ -15,6 +16,7 @@ export const initNextSection = () => {
     infoH3.classList.add('header-hide');
     hr.classList.add('header-hide');
     navSection.classList.add('header-hide');
+    projectSection.style.overflowX = 'scroll';
 
     setTimeout(() => {
       Array.from(projects).forEach((project, index) => {
