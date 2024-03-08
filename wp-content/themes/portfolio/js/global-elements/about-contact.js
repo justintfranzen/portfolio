@@ -8,6 +8,6 @@ export const initAboutContact = () => {
   });
 
   closeBtn.addEventListener('click', () => {
-    aboutContactSection.style.top = '-100%';
+    aboutContactSection.style.top = '-120%';
   });
 };
