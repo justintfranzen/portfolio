@@ -1,4 +1,4 @@
-name: Pull Request Lint & Build
+name: Lint & Build
 on:
   pull_request:
     branches:
