@@ -1,52 +1,21 @@
-name: Main - SiteGround Deploy
 on:
   push:
     branches:
-    - main
-
-env:
-  NODE_VERSION: 16
-  NPM_VERSION: 8
-
+      - main
+   
+name: 🚀 Deploy website on push
 jobs:
-  build:
+  web-deploy:
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-    - name: Git checkout
-      uses: actions/checkout@v2
-
-    - name: Set up Node
-      uses: actions/setup-node@v3
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v3
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        node-version: ${{ env.NODE_VERSION }}
-
-    - name: Set up NPM
-      run: npm install -g npm@${{ env.NPM_VERSION }}
-
-    - name: NPM install
-      run: npm ci
-
-    - name: NPM lint
-      run: npm run lint
-
-    - name: NPM build
-      run: npm run build
-
-    - name: Cleanup
-      run: rm -rf node_modules **/*/node_modules package.json **/*/package.json package-lock.json **/*/package-lock.json
-
-    - name: Sanity check files
-      run: ls -la
-
-    - name: GitHub Action Deploy to SiteGround
-      uses: hjustintfranzen/portfolio.git@v3
-      with:
+        server: <ftp_server> # Replace this with the appropriate ftp server on your SiteGround server
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
-        # Deploy Options
-        # SRC_PATH: "/"
-        # REMOTE_PATH: "/"
-        # PHP_LINT: TRUE
-        # FLAGS: -azvr --inplace --delete --exclude=".*"  --exclude=wp-content/mu-plugins/local-plugin --exclude-from=ignorefile.txt
-        # SCRIPT: "path/yourscript.sh"
-        # CACHE_CLEAR: TRUE
+  server-dir: /public_html/  # Replace this with the appropriate directory on your SiteGround server
