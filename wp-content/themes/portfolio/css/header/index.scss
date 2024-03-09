@@ -373,6 +373,29 @@
       }
     }
   }
+
+  .nav {
+    opacity: 0;
+    position: fixed;
+    top: 90vh;
+    right: 0;
+
+    li {
+      background: #800000;
+      border: 2px solid #800000;
+      color: #fff;
+
+      @media (max-width: 430px) {
+        font-size: 14px;
+        right: 1em;
+        top: 1em;
+      }
+
+      &:hover {
+        background: #800000;
+      }
+    }
+  }
 }
 
 .modal {
