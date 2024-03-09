@@ -18,7 +18,7 @@ get_header();
          <h1><?= the_field('name') ?></h1>
          <hr>
        <h3><?= the_field('description') ?></h3>
-           <div class="nav">
+        <div class="nav">
             <ul>
                 <li class="about-contact-btn">ABOUT + CONTACT <i class="fa-light fa-arrow-right-long"></i></li>
                 <li class="work-section">EXPLORE PROJECTS <i class="fa-light fa-arrow-right-long"></i></li>
@@ -77,6 +77,11 @@ else:
 
   // Do something...
 endif; ?>
+<div class="nav">
+            <ul>
+                <li class="about-contact-btn">ABOUT + CONTACT <i class="fa-light fa-arrow-right-long"></i></li>
+            </ul>
+    </div>
 </div>
 <?php if (have_rows('project')): ?>
     <?php while (have_rows('project')):

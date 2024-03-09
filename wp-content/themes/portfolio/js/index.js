@@ -2,7 +2,7 @@
 // import { initFeaturesNavigation } from './shortcodes/features-navigation';
 
 // Global
-import { initNextSection } from './global-elements/next-section';
+import { initProjectSection } from './global-elements/next-section';
 import { initAboutContact } from './global-elements/about-contact';
 import { initShowProjectInformation } from './global-elements/project-information';
 
@@ -12,7 +12,7 @@ import { initShowProjectInformation } from './global-elements/project-informatio
 //   // Shortcodes
 
 //   // Global Elements
-initNextSection();
+initProjectSection();
 initAboutContact();
 initShowProjectInformation();
 

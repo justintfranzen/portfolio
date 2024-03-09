@@ -1,4 +1,4 @@
-export const initNextSection = () => {
+export const initProjectSection = () => {
   const infoH1 = document.querySelector('.info h1');
   const infoH3 = document.querySelector('.info h3');
   const hr = document.querySelector('.info hr');
@@ -8,6 +8,8 @@ export const initNextSection = () => {
   const heroSectionRight = document.querySelector('.hero-section.right');
   const projects = document.querySelectorAll('.project');
   const projectSection = document.querySelector('.projects');
+  const projectsAboutContact = document.querySelector('.projects .nav');
+  const aboutContactSection = document.querySelector('.about-contact');
 
   projectsLink.addEventListener('click', () => {
     heroSectionLeft.classList.add('open-left');
@@ -27,5 +29,14 @@ export const initNextSection = () => {
         }, index * 200 + 200); // 2000 milliseconds (2 seconds) delay for the first box, then 1000 milliseconds (1 second) gap for the subsequent boxes
       });
     }, 400);
+
+    setTimeout(() => {
+      projectsAboutContact.style.opacity = '1';
+      projectsAboutContact.style.transition = '2s';
+    }, 3000);
+  });
+
+  projectsAboutContact.addEventListener('click', () => {
+    aboutContactSection.style.top = '0';
   });
 };
