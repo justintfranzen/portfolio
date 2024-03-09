@@ -31,8 +31,8 @@ export const initProjectSection = () => {
     }, 400);
 
     setTimeout(() => {
-      projectsAboutContact.style.opacity = '1';
-      projectsAboutContact.style.transition = '2s';
+      projectsAboutContact.style.right = '1em';
+      projectsAboutContact.style.transition = '1s';
     }, 3000);
   });
 

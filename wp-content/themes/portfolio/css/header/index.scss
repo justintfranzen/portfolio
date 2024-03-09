@@ -375,10 +375,14 @@
   }
 
   .nav {
-    opacity: 0;
+    opacity: 1;
     position: fixed;
     top: 90vh;
     right: 1em;
+
+    @media (max-width: 430px) {
+      right: -15em;
+    }
 
     li {
       background: #800000;
