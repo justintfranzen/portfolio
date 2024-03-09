@@ -77,10 +77,10 @@ else:
 
   // Do something...
 endif; ?>
-<div class="nav">
-            <ul>
-                <li class="about-contact-btn">ABOUT + CONTACT</li>
-            </ul>
+    <div class="nav">
+         <ul>
+            <li class="about-contact-btn">ABOUT + CONTACT</li>
+        </ul>
     </div>
 </div>
 <?php if (have_rows('project')): ?>
