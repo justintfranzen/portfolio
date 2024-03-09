@@ -79,7 +79,7 @@ else:
 endif; ?>
 <div class="nav">
             <ul>
-                <li class="about-contact-btn">ABOUT + CONTACT <i class="fa-light fa-arrow-right-long"></i></li>
+                <li class="about-contact-btn">ABOUT + CONTACT</li>
             </ul>
     </div>
 </div>

@@ -377,21 +377,29 @@
   .nav {
     opacity: 0;
     position: fixed;
-    top: 80vh;
+    top: 90vh;
     right: 1em;
 
     li {
       background: #800000;
       border: 2px solid #800000;
       color: #fff;
+      transition: 0.3s;
 
       @media (max-width: 430px) {
         font-size: 14px;
+        padding: 0.8em 1em;
       }
 
       &:hover {
-        background: #800000;
+        padding-right: 1em;
+        color: #800000;
+        background: transparent;
       }
+    }
+
+    @media (max-width: 430px) {
+      top: 80vh;
     }
   }
 }
