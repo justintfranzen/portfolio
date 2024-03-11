@@ -552,14 +552,18 @@
 
   .gform-body {
     &.gform_body {
-      input,
-      textarea {
-        border: 1.5px solid #800000;
-        background: #ededed;
-      }
+      .gform_fields {
+        &.top_label {
+          @media (max-width: 430px) {
+            grid-row-gap: 1.5em !important;
+          }
 
-      textarea {
-        margin-top: -1em;
+          input,
+          textarea {
+            border: 1.5px solid #800000;
+            background: #ededed;
+          }
+        }
       }
     }
   }
