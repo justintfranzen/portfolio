@@ -31,7 +31,7 @@ export const initProjectSection = () => {
     }, 400);
 
     setTimeout(() => {
-      projectsAboutContact.style.right = '1em';
+      projectsAboutContact.style.right = '2em';
       projectsAboutContact.style.transition = '1s';
     }, 3000);
   });
