@@ -538,10 +538,10 @@
     top: 0;
     cursor: pointer;
     background: #800000;
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
 
     .fa-light {
       &::before {
