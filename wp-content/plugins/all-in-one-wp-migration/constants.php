@@ -35,7 +35,7 @@ define( 'AI1WM_DEBUG', false );
 // ==================
 // = Plugin Version =
 // ==================
-define( 'AI1WM_VERSION', '7.81' );
+define( 'AI1WM_VERSION', '7.87' );
 
 // ===============
 // = Plugin Name =
@@ -207,10 +207,15 @@ define( 'AI1WM_COOKIES_NAME', 'cookies.txt' );
 // =================================
 define( 'AI1WM_MUPLUGINS_NAME', 'mu-plugins' );
 
+// ========================
+// = Less Cache Extension =
+// ========================
+define( 'AI1WM_LESS_CACHE_EXTENSION', '.less.cache' );
+
 // =============================
-// = Less Cache Extension Name =
+// = SQLite Database Extension =
 // =============================
-define( 'AI1WM_LESS_CACHE_NAME', '.less.cache' );
+define( 'AI1WM_SQLITE_DATABASE_EXTENSION', '.sqlite' );
 
 // ============================
 // = Elementor CSS Cache Name =
@@ -257,6 +262,16 @@ define( 'AI1WM_WP_COMSH_LOADER_NAME', 'wpcomsh-loader.php' );
 // ===========================
 define( 'AI1WM_WP_COMSH_HELPER_NAME', 'wpcomsh' );
 
+// ====================================
+// = SQLite Database Integration Name =
+// ====================================
+define( 'AI1WM_SQLITE_DATABASE_INTEGRATION_NAME', 'sqlite-database-integration' );
+
+// =============================
+// = SQLite Database Zero Name =
+// =============================
+define( 'AI1WM_SQLITE_DATABASE_ZERO_NAME', '0-sqlite.php' );
+
 // ================================
 // = WP Engine System Plugin Name =
 // ================================
@@ -285,7 +300,7 @@ define( 'AI1WM_W3TC_CONFIG_FILE', 'w3tc-config' . DIRECTORY_SEPARATOR . 'master.
 // ==================
 // = Error Log Name =
 // ==================
-define( 'AI1WM_ERROR_NAME', 'error.log' );
+define( 'AI1WM_ERROR_NAME', 'error-log-%s.log' );
 
 // ==============
 // = Secret Key =
@@ -455,6 +470,11 @@ if ( ! defined( 'AI1WM_MAX_SELECT_RECORDS' ) ) {
 // = Max Storage Cleanup =
 // =======================
 define( 'AI1WM_MAX_STORAGE_CLEANUP', 24 * 60 * 60 );
+
+// ===================
+// = Max Log Cleanup =
+// ===================
+define( 'AI1WM_MAX_LOG_CLEANUP', 7 * 24 * 60 * 60 );
 
 // =====================
 // = Disk Space Factor =
