@@ -20,7 +20,7 @@ get_header();
        <h3><?= the_field('description') ?></h3>
         <div class="nav">
             <ul>
-                <li class="about-contact-btn">ABOUT + CONTACT <i class="fa-light fa-arrow-right-long"></i></li>
+                <li class="about-contact-btn">ABOUT <i class="fa-light fa-arrow-right-long"></i></li>
                 <li class="work-section">EXPLORE PROJECTS <i class="fa-light fa-arrow-right-long"></i></li>
             </ul>
         </div>
@@ -65,13 +65,7 @@ if (have_rows('project')):
     </div>
     <?php endif;
     echo '</div>';
-
-    // Do something, but make sure you escape the value if outputting directly...
-
-    // End loop.
   endwhile;
-
-  // No value.
 else:
 
 
@@ -79,7 +73,7 @@ else:
 endif; ?>
     <div class="nav">
          <ul>
-            <li class="about-contact-btn">ABOUT + CONTACT</li>
+            <li class="about-contact-btn">ABOUT</li>
         </ul>
     </div>
 </div>
@@ -104,10 +98,12 @@ endif; ?>
 <?= the_field('about') ?>
 </div>
 
+<!---------
 <div class="contact">
     <h2>SEND A MESSAGE</h2>
     <?= do_shortcode(get_field('contact_form')) ?>
 </div>
+------>
 
 
 <?php get_footer(); ?>
